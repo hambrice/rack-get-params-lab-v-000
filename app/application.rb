@@ -9,14 +9,13 @@ class Application
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
-      end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
       @@cart.each do |item|
         resp.write "#{item}\n"
-      elsif req.path.match(/add/)
+    elsif req.path.match(/add/)
         search_item = req["item"]
         
     else
