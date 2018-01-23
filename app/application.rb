@@ -25,7 +25,7 @@ class Application
         search_item = req["item"]
         if @@items.include? (search_item)
           @@cart << search_item
-        else 
+        else
           resp.write "We don't have that item."
         end
 
