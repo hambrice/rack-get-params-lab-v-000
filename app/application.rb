@@ -17,7 +17,7 @@ class Application
         resp.write "#{item}\n"
     elsif req.path.match(/add/)
         search_item = req["item"]
-        
+
     else
       resp.write "Path Not Found"
     end
